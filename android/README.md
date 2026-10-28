@@ -99,3 +99,45 @@ Google Play Console requires an **Android App Bundle (.aab)** signed with an upl
 ```
 Output bundle will be located at `app/build/outputs/bundle/release/app-release.aab`.
 
+---
+
+## ☁️ Building with GitHub Codespaces (Browser Linux Cloud)
+
+If you are using **GitHub Codespaces** to build your AAB and APK directly in the browser:
+
+### Fast 1-Command Automated Build
+Open the terminal in Codespaces and run:
+```bash
+cd android
+chmod +x build-codespaces.sh
+./build-codespaces.sh
+```
+
+This single command automatically:
+1. Installs OpenJDK 17 and dependencies.
+2. Installs Android command-line tools and Android SDK 35.
+3. Accepts licenses.
+4. Generates the release upload keystore at `app/release.keystore`.
+5. Compiles and signs the **Android App Bundle (.aab)** for Google Play Console.
+6. Compiles the **APK (.apk)** for testing on your Android phone.
+
+### Output File Locations in Codespaces
+- **Google Play Release Bundle**: `android/app/build/outputs/bundle/release/app-release.aab`
+- **Installable Android APK**: `android/app/build/outputs/apk/release/app-release.apk`
+
+To download to your computer from Codespaces:
+In the left sidebar Explorer, expand `android/app/build/outputs/bundle/release/`, right-click `app-release.aab`, and select **Download...**.
+
+---
+
+## ⚡ Alternative: Free Automated Build with GitHub Actions
+You can also build without running any commands!
+1. Go to your GitHub repository in your browser.
+2. Click on the **Actions** tab at the top.
+3. In the left sidebar, click **"Build Android Release AAB & APK"**.
+4. Click **Run workflow** ➔ **Run workflow**.
+5. When the 2-minute build finishes, click the completed run.
+6. Under **Artifacts** at the bottom, click:
+   - `ludo-bounty-release-aab` to download `app-release.aab`
+   - `ludo-bounty-apks` to download the APKs!
+

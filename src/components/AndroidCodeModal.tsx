@@ -585,7 +585,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ];
 
 export const AndroidCodeModal: React.FC<AndroidCodeModalProps> = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState<'aab_guide' | 'code'>('aab_guide');
+  const [activeTab, setActiveTab] = useState<'aab_guide' | 'codespaces' | 'code'>('codespaces');
   const [selectedFileId, setSelectedFileId] = useState('view');
   const [copied, setCopied] = useState(false);
 
@@ -612,7 +612,7 @@ export const AndroidCodeModal: React.FC<AndroidCodeModalProps> = ({ isOpen, onCl
             </div>
             <div>
               <h2 className="text-sm sm:text-base font-black text-emerald-300 uppercase tracking-wide flex items-center gap-2">
-                Google Play .AAB Release & Code
+                Google Play .AAB & APK Release
               </h2>
               <span className="text-[11px] text-slate-400">
                 Package: <code className="text-amber-300 font-mono">com.ludobounty.game</code> (v1.0.0)
@@ -633,6 +633,20 @@ export const AndroidCodeModal: React.FC<AndroidCodeModalProps> = ({ isOpen, onCl
             <button
               onClick={() => {
                 soundEffects.playClick();
+                setActiveTab('codespaces');
+              }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                activeTab === 'codespaces'
+                  ? 'bg-amber-400 text-slate-950 shadow-md'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <Terminal className="w-3.5 h-3.5" />
+              <span>GitHub Codespaces</span>
+            </button>
+            <button
+              onClick={() => {
+                soundEffects.playClick();
                 setActiveTab('aab_guide');
               }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
@@ -642,7 +656,7 @@ export const AndroidCodeModal: React.FC<AndroidCodeModalProps> = ({ isOpen, onCl
               }`}
             >
               <HelpCircle className="w-3.5 h-3.5" />
-              <span>Google Play .AAB Guide</span>
+              <span>Android Studio</span>
             </button>
             <button
               onClick={() => {
@@ -656,7 +670,7 @@ export const AndroidCodeModal: React.FC<AndroidCodeModalProps> = ({ isOpen, onCl
               }`}
             >
               <FileCode className="w-3.5 h-3.5" />
-              <span>Kotlin Files ({ANDROID_FILES.length})</span>
+              <span>Files</span>
             </button>
           </div>
 
@@ -671,8 +685,82 @@ export const AndroidCodeModal: React.FC<AndroidCodeModalProps> = ({ isOpen, onCl
           </a>
         </div>
 
-        {/* TAB 1: Google Play .aab Instructions */}
-        {activeTab === 'aab_guide' ? (
+        {/* TAB 1: GitHub Codespaces Instructions */}
+        {activeTab === 'codespaces' ? (
+          <div className="flex-1 overflow-y-auto py-3 space-y-3 pr-1 text-slate-200">
+            <div className="p-3 bg-gradient-to-r from-amber-950/60 to-slate-900 rounded-2xl border border-amber-500/40">
+              <h3 className="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-2">
+                <Terminal className="w-4 h-4 text-amber-400" />
+                <span>Build in GitHub Codespaces (Terminal)</span>
+              </h3>
+              <p className="text-xs text-slate-300 mt-1">
+                Since your code is on GitHub, you can generate both <strong>.aab</strong> and <strong>.apk</strong> in GitHub Codespaces with one single command:
+              </p>
+            </div>
+
+            {/* Quick Command Box */}
+            <div className="p-3 bg-black/60 rounded-2xl border border-amber-400/30">
+              <div className="text-[11px] font-bold text-amber-300 uppercase tracking-wider mb-1.5 flex items-center justify-between">
+                <span>Run this in Codespaces Terminal:</span>
+                <span className="text-[10px] text-slate-400">Auto-installs SDK & builds</span>
+              </div>
+              <div className="bg-slate-950 p-2.5 rounded-xl border border-white/10 font-mono text-xs text-amber-300 flex items-center justify-between gap-2 overflow-x-auto">
+                <code>cd android && chmod +x build-codespaces.sh && ./build-codespaces.sh</code>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="p-2.5 bg-white/5 rounded-xl border border-white/10 text-xs">
+                <div className="font-bold text-white flex items-center gap-1.5">
+                  <span className="w-5 h-5 rounded-full bg-amber-400 text-slate-950 font-black text-[11px] flex items-center justify-center">1</span>
+                  Open Codespace & Run the Script
+                </div>
+                <p className="text-slate-300 mt-1 pl-6">
+                  In your GitHub repo, click <strong>Code &gt; Codespaces &gt; Create codespace on main</strong>. Once the terminal opens, paste the command above and press Enter.
+                </p>
+              </div>
+
+              <div className="p-2.5 bg-white/5 rounded-xl border border-white/10 text-xs">
+                <div className="font-bold text-white flex items-center gap-1.5">
+                  <span className="w-5 h-5 rounded-full bg-amber-400 text-slate-950 font-black text-[11px] flex items-center justify-center">2</span>
+                  What the Script Automatically Does
+                </div>
+                <ul className="list-disc list-inside mt-1 pl-6 space-y-0.5 text-slate-400 text-[11px]">
+                  <li>Installs OpenJDK 17 and Android SDK 35</li>
+                  <li>Generates the release upload keystore (<code className="text-amber-300">release.keystore</code>)</li>
+                  <li>Builds signed <strong className="text-emerald-300">app-release.aab</strong> for Google Play Console</li>
+                  <li>Builds installable <strong className="text-cyan-300">app-release.apk</strong> for phone testing</li>
+                </ul>
+              </div>
+
+              <div className="p-2.5 bg-emerald-500/10 rounded-xl border border-emerald-400/30 text-xs">
+                <div className="font-bold text-emerald-300 flex items-center gap-1.5">
+                  <span className="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 font-black text-[11px] flex items-center justify-center">3</span>
+                  Download Files to Your PC
+                </div>
+                <p className="text-slate-300 mt-1 pl-6">
+                  In the left file explorer in Codespaces, navigate to:
+                  <br />
+                  <code className="text-amber-300 bg-black/50 px-1 py-0.5 rounded font-mono text-[10px] inline-block mt-1">
+                    android/app/build/outputs/bundle/release/app-release.aab
+                  </code>
+                  <br />
+                  Right-click <strong className="text-white">app-release.aab</strong> and click <strong>Download...</strong> to save it to your computer!
+                </p>
+              </div>
+
+              <div className="p-2.5 bg-white/5 rounded-xl border border-white/10 text-xs">
+                <div className="font-bold text-white flex items-center gap-1.5">
+                  <span className="w-5 h-5 rounded-full bg-indigo-500 text-white font-black text-[11px] flex items-center justify-center">★</span>
+                  Bonus: Free 1-Click Build via GitHub Actions
+                </div>
+                <p className="text-slate-400 mt-1 pl-6">
+                  Don't want to use terminal? Go to your repo on GitHub &gt; <strong>Actions</strong> tab &gt; <strong>Build Android Release AAB & APK</strong> &gt; <strong>Run workflow</strong>. Download the generated AAB & APK straight from GitHub!
+                </p>
+              </div>
+            </div>
+          </div>
+        ) : activeTab === 'aab_guide' ? (
           <div className="flex-1 overflow-y-auto py-3 space-y-3.5 pr-1 text-slate-200">
             <div className="p-3.5 bg-gradient-to-r from-emerald-950/60 to-slate-900 rounded-2xl border border-emerald-500/40">
               <h3 className="text-xs font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-2">
