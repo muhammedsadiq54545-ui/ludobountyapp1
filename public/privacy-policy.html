@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Ludo Bounty (com.ludobounty.game)</title>
+  <meta name="description" content="Official Privacy Policy for Ludo Bounty (Package: com.ludobounty.game). Learn how we protect your privacy, handle local game data, and ensure a safe gaming environment." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-surface: #121829;
+      --bg-card: #182036;
+      --bg-card-hover: #1f2a47;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(245, 158, 11, 0.35);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --amber-gold: #f59e0b;
+      --amber-light: #fef3c7;
+      --emerald-green: #10b981;
+      --emerald-light: #d1fae5;
+      --blue-accent: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--amber-gold);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #fbbf24;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 80px 20px;
+    }
+
+    /* Header & Branding */
+    header.header {
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, transparent 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: 24px;
+      padding: 32px 28px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header.header::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.18), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--amber-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      text-decoration: none;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    h1.title {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .meta-item {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .meta-item strong {
+      color: var(--text-main);
+      display: block;
+      font-size: 13px;
+      margin-top: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Table of Contents */
+    .toc-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin-bottom: 32px;
+    }
+
+    .toc-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--amber-gold);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 8px 16px;
+    }
+
+    .toc-list li a {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list li a:hover {
+      color: var(--amber-gold);
+    }
+
+    .toc-list li a::before {
+      content: "•";
+      color: var(--amber-gold);
+      font-size: 16px;
+    }
+
+    /* Content Cards */
+    .policy-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 24px;
+      scroll-margin-top: 24px;
+    }
+
+    .policy-section h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--amber-gold);
+      font-size: 12px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #cbd5e1;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin: 12px 0 16px 20px;
+      color: #cbd5e1;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Highlights / Callout Boxes */
+    .callout {
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid;
+      background: var(--bg-card);
+    }
+
+    .callout-bounty {
+      border-left-color: var(--amber-gold);
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-left-width: 4px;
+    }
+
+    .callout-bounty strong {
+      color: var(--amber-gold);
+    }
+
+    .callout-green {
+      border-left-color: var(--emerald-green);
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-left-width: 4px;
+    }
+
+    .callout-green strong {
+      color: var(--emerald-green);
+    }
+
+    .callout-blue {
+      border-left-color: var(--blue-accent);
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-left-width: 4px;
+    }
+
+    .highlight-badge {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #f8fafc;
+    }
+
+    /* Contact box */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(16, 185, 129, 0.08));
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 22px;
+      background: var(--amber-gold);
+      color: #0a0e1a;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .contact-email:hover {
+      background: #fbbf24;
+      transform: translateY(-2px);
+      text-decoration: none;
+      color: #000000;
+    }
+
+    footer.footer {
+      text-align: center;
+      padding-top: 40px;
+      color: var(--text-dim);
+      font-size: 12px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 48px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 16px 14px 60px 14px;
+      }
+      header.header {
+        padding: 22px 18px;
+      }
+      h1.title {
+        font-size: 22px;
+      }
+      .policy-section {
+        padding: 20px 18px;
+      }
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #111827;
+      }
+      .policy-section, header.header, .toc-card, .contact-card {
+        background: #ffffff;
+        color: #111827;
+        border: 1px solid #e5e7eb;
+        box-shadow: none;
+      }
+      a {
+        color: #2563eb;
+      }
+      .back-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand-row">
+        <div class="brand-badge">
+          <span>🎲 Ludo Bounty Official Policy</span>
+        </div>
+        <a href="/" class="back-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Back to Game
+        </a>
+      </div>
+
+      <h1 class="title">Privacy Policy for Ludo Bounty</h1>
+      <p style="color: var(--text-muted); font-size: 14px;">
+        This Privacy Policy explains how <strong>Ludo Bounty</strong> ("we", "our", or "the App") collects, uses, handles, and protects player information in full compliance with the <strong>Google Play Developer Program Policies</strong>.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          Application Name:
+          <strong>Ludo Bounty</strong>
+        </div>
+        <div class="meta-item">
+          Package Name:
+          <strong>com.ludobounty.game</strong>
+        </div>
+        <div class="meta-item">
+          Developer Contact:
+          <strong>muhammedsadiq54545@gmail.com</strong>
+        </div>
+        <div class="meta-item">
+          Effective Date:
+          <strong>October 27, 2026</strong>
+        </div>
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc-card" aria-label="Table of Contents">
+      <div class="toc-title">Table of Contents</div>
+      <ul class="toc-list">
+        <li><a href="#summary">1. Overview & Commitment</a></li>
+        <li><a href="#data-collection">2. Information We Collect</a></li>
+        <li><a href="#bounty-coins">3. Virtual Currency Disclaimer</a></li>
+        <li><a href="#data-usage">4. How We Use Information</a></li>
+        <li><a href="#device-permissions">5. Device Permissions</a></li>
+        <li><a href="#third-party">6. Third-Party Services</a></li>
+        <li><a href="#children">7. Children's Privacy (COPPA)</a></li>
+        <li><a href="#retention-deletion">8. Data Retention & Deletion</a></li>
+        <li><a href="#security">9. Data Security</a></li>
+        <li><a href="#updates">10. Policy Updates</a></li>
+        <li><a href="#contact">11. Developer Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section 1: Overview -->
+    <section class="policy-section" id="summary">
+      <h2><span class="section-num">01</span> Overview & Privacy Commitment</h2>
+      <p>
+        Welcome to <strong>Ludo Bounty</strong> (Package ID: <span class="highlight-badge">com.ludobounty.game</span>). Your privacy is of fundamental importance to us. We believe in transparency and providing a clean, fun, and safe classic board game experience for players worldwide.
+      </p>
+      <div class="callout callout-green">
+        <strong>Zero Sensitive Data Principle:</strong> Ludo Bounty does <strong>not</strong> require user registration, account sign-ups, phone numbers, contact lists, GPS location, microphones, or camera access. You can play the full game completely offline or locally without transmitting personal identities to external servers.
+      </div>
+    </section>
+
+    <!-- Section 2: Data Collection -->
+    <section class="policy-section" id="data-collection">
+      <h2><span class="section-num">02</span> Information We Collect and Process</h2>
+      <p>Ludo Bounty is primarily designed as a client-side offline and local multiplayer game. The following categories of data are processed solely on your device:</p>
+
+      <ul>
+        <li>
+          <strong>Gameplay Preferences & Settings:</strong> Audio toggle states (sound effects on/off), fast move animation toggles, and tactile vibration (haptics) preferences.
+        </li>
+        <li>
+          <strong>Game State & Session Progress:</strong> Board state, active player turns, pawn coordinates, roll histories, and saved matches to allow players to resume an unfinished session.
+        </li>
+        <li>
+          <strong>Statistics & Virtual Bounty Coins:</strong> Total games played, games won, win rates, and fictional in-game "Bounty Coins" balance accumulated through gameplay achievements.
+        </li>
+        <li>
+          <strong>Non-Personal Technical Diagnostics:</strong> Standard non-identifying operating system metrics (e.g., screen density, operating system version, and basic performance metrics) processed automatically by your device's runtime to render animations smoothly.
+        </li>
+      </ul>
+
+      <p>
+        All of the aforementioned items are stored locally in your device's isolated storage sandbox (<span class="highlight-badge">SharedPreferences</span> on Android or local web browser storage). None of this data is transmitted or sold to any data brokers.
+      </p>
+    </section>
+
+    <!-- Section 3: Bounty Coins & Real Money Disclaimer -->
+    <section class="policy-section" id="bounty-coins">
+      <h2><span class="section-num">03</span> Virtual Currency Disclaimer (No Real-Money Gambling)</h2>
+      <div class="callout callout-bounty">
+        <strong>CRITICAL NOTICE — PURELY VIRTUAL ENTERTAINMENT:</strong>
+        <p style="margin-top: 8px;">
+          "Bounty Coins" and any in-game rewards inside <strong>Ludo Bounty</strong> are strictly fictional virtual game elements designed exclusively for game progression, celebratory feedback, and entertainment purposes.
+        </p>
+      </div>
+
+      <p>To avoid any ambiguity and to adhere strictly with Google Play's Gambling and Financial Services policies:</p>
+      <ol>
+        <li><strong>No Real-World Monetary Value:</strong> Bounty Coins have no monetary equivalence in real currency, legal tender, gift cards, or physical goods.</li>
+        <li><strong>No Cash Withdrawals or Payouts:</strong> Players cannot withdraw, redeem, transfer, sell, or exchange Bounty Coins for real money under any circumstances.</li>
+        <li><strong>No Wagering or Betting:</strong> Ludo Bounty is not a casino, gambling platform, sports betting app, or paid contest. Winning or losing matches does not involve real-money stakes.</li>
+      </ol>
+    </section>
+
+    <!-- Section 4: How We Use Information -->
+    <section class="policy-section" id="data-usage">
+      <h2><span class="section-num">04</span> How We Use Processed Data</h2>
+      <p>We process local game information exclusively for the following legitimate purposes:</p>
+      <ul>
+        <li>To maintain and remember your gameplay preferences (sound effects, haptic vibration, animation speed).</li>
+        <li>To enable the "Continue Last Game" feature so an ongoing match is not lost if the app is closed.</li>
+        <li>To calculate and display local achievements, win counters, and leaderboard statistics.</li>
+        <li>To guarantee optimal board responsiveness, frame rate stability, and touch interaction on various screen sizes.</li>
+      </ul>
+      <p>We do not perform user profiling, behavioral tracking, cross-app tracking, or targeted advertising.</p>
+    </section>
+
+    <!-- Section 5: Device Permissions -->
+    <section class="policy-section" id="device-permissions">
+      <h2><span class="section-num">05</span> Device Permissions Explained</h2>
+      <p>When running on Android devices, Ludo Bounty may request or utilize minimal hardware permissions required strictly for core gameplay:</p>
+
+      <ul>
+        <li>
+          <span class="highlight-badge">android.permission.VIBRATE</span>: Used solely to trigger subtle haptic vibrations during dice rolls, token captures, and token home runs when haptics are enabled in Settings. Can be toggled off at any time in the in-game Settings.
+        </li>
+        <li>
+          <span class="highlight-badge">android.permission.INTERNET</span> & <span class="highlight-badge">ACCESS_NETWORK_STATE</span>: Standard network connectivity permissions required for loading web assets, verifying network availability for future online features, and system-level app integrity checks.
+        </li>
+      </ul>
+
+      <p>
+        The app does <strong>NOT</strong> request sensitive permissions such as Camera, Microphone, GPS Location, Contacts, SMS, Phone State, or External Storage files.
+      </p>
+    </section>
+
+    <!-- Section 6: Third-Party Services -->
+    <section class="policy-section" id="third-party">
+      <h2><span class="section-num">06</span> Third-Party Services</h2>
+      <p>
+        The application is distributed through the <strong>Google Play Store</strong>. When downloading, updating, or running apps via Google Play, Google may process information subject to Google's standard privacy policies:
+      </p>
+      <ul>
+        <li>
+          <strong>Google Play Services:</strong> Core operating system services, app performance diagnostics, and crash logs provided automatically by the Android OS.
+          <br />
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            Read Google's Privacy Policy &rarr;
+          </a>
+        </li>
+      </ul>
+      <p>We do not integrate third-party ad networks (such as AdMob, Unity Ads, or Meta Audience Network) that track personal identifiers.</p>
+    </section>
+
+    <!-- Section 7: Children's Privacy -->
+    <section class="policy-section" id="children">
+      <h2><span class="section-num">07</span> Children's Privacy (COPPA & Families Policy)</h2>
+      <div class="callout callout-blue">
+        <strong>Family Friendly & Safe for All Ages:</strong> Ludo Bounty is a traditional board game intended for general audiences, families, and players of all ages.
+      </div>
+      <p>
+        We do not knowingly collect, store, or solicit personally identifiable information (PII) from children under the age of 13 (or under 16 in applicable European jurisdictions) in strict compliance with the U.S. Children’s Online Privacy Protection Act (<strong>COPPA</strong>), General Data Protection Regulation (<strong>GDPR</strong>), and the <strong>Google Play Families Policy</strong>.
+      </p>
+      <p>
+        Because the game operates locally without user accounts or personal profiles, no child's personal identity is exposed or collected. If a parent or guardian believes their child has somehow submitted personal information to us, please reach out to <a href="mailto:muhammedsadiq54545@gmail.com">muhammedsadiq54545@gmail.com</a> and we will immediately take steps to permanently delete any such data.
+      </p>
+    </section>
+
+    <!-- Section 8: Data Retention & User Rights -->
+    <section class="policy-section" id="retention-deletion">
+      <h2><span class="section-num">08</span> Data Retention, Deletion, & Player Rights</h2>
+      <p>
+        Because all game state and settings reside exclusively on your physical device, you maintain full control over your data at all times:
+      </p>
+      <ul>
+        <li>
+          <strong>Reset In-Game Data:</strong> You can reset all accumulated Bounty Coins, match histories, and statistics at any time by opening the in-game <strong>Settings</strong> modal and tapping <em>"Reset Statistics"</em>.
+        </li>
+        <li>
+          <strong>Device Clear Storage:</strong> On Android devices, you can completely erase all local data by navigating to:
+          <br />
+          <span class="highlight-badge">Device Settings &gt; Apps &gt; Ludo Bounty &gt; Storage &gt; Clear Storage / Clear Data</span>.
+        </li>
+        <li>
+          <strong>Uninstallation:</strong> Uninstalling the application immediately deletes all locally saved preferences and application files from your device.
+        </li>
+        <li>
+          <strong>Data Inquiries & Deletion Requests:</strong> If you have any inquiries regarding data handling or wish to submit a formal deletion request, you can email us directly at <a href="mailto:muhammedsadiq54545@gmail.com">muhammedsadiq54545@gmail.com</a>.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 9: Security -->
+    <section class="policy-section" id="security">
+      <h2><span class="section-num">09</span> Data Security</h2>
+      <p>
+        We are dedicated to safeguarding your game data. Because Ludo Bounty does not maintain remote database records of your personal credentials or transactions, your exposure to remote database breaches is minimized. Any local data written to your device is protected by the Android sandbox operating system security model, preventing unauthorized access by other applications.
+      </p>
+    </section>
+
+    <!-- Section 10: Updates -->
+    <section class="policy-section" id="updates">
+      <h2><span class="section-num">10</span> Changes to this Privacy Policy</h2>
+      <p>
+        We may periodically revise this Privacy Policy to reflect app updates, new gameplay modes, or evolving legal and Google Play regulatory requirements. When changes are made, the revised policy will be posted on this publicly accessible page with an updated "Effective Date". We encourage you to review this page periodically.
+      </p>
+    </section>
+
+    <!-- Section 11: Contact Us -->
+    <section class="policy-section" id="contact">
+      <h2><span class="section-num">11</span> Contact Information</h2>
+      <p>
+        If you have any questions, suggestions, feedback, or concerns regarding this Privacy Policy, your rights, or Ludo Bounty's privacy practices, please contact the developer:
+      </p>
+
+      <div class="contact-card">
+        <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 4px;">Developer Support & Inquiries</h3>
+        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 0;">
+          Ludo Bounty Development Team &bull; Package: com.ludobounty.game
+        </p>
+        <a href="mailto:muhammedsadiq54545@gmail.com" class="contact-email">
+          ✉ muhammedsadiq54545@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Ludo Bounty (com.ludobounty.game). All rights reserved.</p>
+      <p style="margin-top: 6px;">Built for classic board gaming entertainment.</p>
+    </footer>
+  </div>
+</body>
+</html>

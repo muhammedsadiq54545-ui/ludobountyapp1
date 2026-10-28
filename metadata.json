@@ -1,0 +1,8 @@
+{
+  "name": "Ludo Bounty",
+  "description": "Ludo Bounty - Classic 2 to 4 player Ludo board game with 3D-inspired graphics, local multiplayer, smart computer AI, sound effects, and bounty rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

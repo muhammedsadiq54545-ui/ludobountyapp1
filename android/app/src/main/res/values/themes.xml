@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LudoBounty" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ludo_green</item>
+        <item name="colorPrimaryVariant">#047857</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">#090D16</item>
+        <item name="android:navigationBarColor">#090D16</item>
+        <item name="android:windowBackground">@color/navy_bg</item>
+    </style>
+</resources>

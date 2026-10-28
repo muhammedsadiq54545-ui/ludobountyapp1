@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navy_bg">#090D16</color>
+    <color name="ludo_green">#059669</color>
+    <color name="ludo_red">#DC2626</color>
+    <color name="ludo_blue">#2563EB</color>
+    <color name="ludo_yellow">#D97706</color>
+    <color name="accent_gold">#FBBF24</color>
+</resources>
